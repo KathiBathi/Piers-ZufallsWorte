@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />	
+    <title>Random Word Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="main.js" defer=defer></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+    <main>
+    <div class="contentWrap">   
+        <div class="words">
+        </div>
+        <button class="randomBtn">Los geht's!</button> 
+    </div> 
+
+
+<button class="menuBtn">Menü</button>
+
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+
+<div class="listenWrap">
+<div class= "warnung"></div>
+    <div class="listenFlex">
+        
+            <div class="ulListenWrap"> 
+                <p><b>Adjektive</b></p>
+                <ul class="adjektivListe"> 
+                </ul>
+            </div>
+
+            <div class="ulListenWrap"> 
+                <p><b>Nomen</b></p>
+                <ul class="nomenListe"> 
+                </ul>
+            </div>
+    </div>
+</div>
+
+        <div class="flexWrap"> 
+            <div class="flexContainer">
+                <div class="wrdInput"> 
+                    <label>Neues Adjektiv:</label>
+                    <input type=text class="inputAdj">
+                    <button class="sendAdj">speichern</button> 
+                </div>
+                <div class="wrdInput"> 
+                    <label>Neues Nomen:</label>
+                    <input type=text class= "inputNom">
+                    <button class="sendNom">speichern</button> 
+                </div>
+            </div>
+        </div> 
+        <div class="newSessionWrap"> 
+            <button>Auf Standard zurücksetzen</button> 
+        </div>
+  </div>
+    </main>
+</body>
+</html>

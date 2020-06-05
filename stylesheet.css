@@ -1,0 +1,397 @@
+/***************************************************/
+/* --------------- Table of Content -------------  */
+/***************************************************/
+
+/* General Styling
+
+/* Styling Mobile
+    /* ContentWrap (= random Words + button)
+    /* WordInput
+    /* NewSession
+
+/*Styling modal Fenster (mobile)
+
+/* Styling Tablet
+
+/* Styling Desktop
+
+/* General button Styling
+(hover, focus, active...)
+
+/***************************************************/
+/* ---------------General Styling ---------------  */
+/***************************************************/
+
+:root {
+    --white: #fff;
+
+    --mint0: #f0f7f4;
+    --mint1: #dce7e2;
+    --mint2: #c0dcd0;
+    
+    --grey0: #f9f9f9;
+    --grey1: #dcdcdc;
+    --grey2: #dcdcdc;
+    
+    --red0: #f9c4bb;
+    --red1: #f7a69e;
+    --red2: #f58c86;
+    --red3: #f77871;
+    
+    --dblue1: #11294d; /*sehr gesättigt*/
+    --dblue2: #17202f; /*einen Takken heller*/
+    --dblue3: #17202f; /*einen Takken dunkler*/
+    }
+    
+    *{
+    font-family: roboto, helvetica, Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+
+
+/***************************************************/
+/* --------------- Styling Mobile ---------------  */
+/***************************************************/
+
+/* --------------- ContentWrap ---------------  */
+/* ---------------   mobile  ---------------  */
+
+    body{
+    background-color: var(--red3);
+    position: relative;
+    /* transform: rotate(0.6deg); */
+    }
+    
+    main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--red3);
+    padding: 1rem;
+    box-sizing: border-box;
+    }
+
+    .contentWrap {
+    display: block;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 2vh;
+    }
+
+    .words {
+    color: var(--grey0);
+    font-size: 3rem;
+    text-align: center;
+    word-break: break-word;
+    }
+
+    .randomBtn,
+    .menuBtn {
+    display: block;
+    margin: auto;
+    padding: 0.4rem 1.5rem 0.4rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--grey0);
+    color: var(--dblue2);
+    cursor: pointer;
+    }
+
+    .randomBtn {
+    font-size: 2rem;
+    margin-top: 3rem;
+    width: 250px;
+    }
+
+    .menuBtn {
+        margin-top: 15vh;
+        font-size: 1.5rem;
+        width: 200px;
+    }
+
+    .zeile {
+      display: block;
+    }
+
+/* --------------- WordInput ---------------  */
+/* ---------------   mobile  ---------------  */
+
+    .flexWrap{
+    padding-top: 5vh;
+    display: block;
+    margin:auto;
+    flex-wrap: wrap;
+    }
+
+    .flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+
+    .wrdInput {
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    max-width: 400px; /*verhindert hässliche lines*/
+    }
+
+    .wrdInput label {
+    font-size: 1.5rem;
+    color: var(--grey0);
+    }
+
+    .wrdInput input{
+    font-size: 1.5rem; 
+    line-height: 2.1rem; 
+    border-radius: 2rem;
+    padding-left: 1rem;
+    border: none; 
+    margin-bottom: 0.4rem;
+    /* max-width: 250px; */
+    }
+
+    .wrdInput button{
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--grey0);
+    color: var(--dblue2);
+    cursor: pointer;
+    letter-spacing: 2px;
+    transform: translateY(-2px);
+    }
+
+
+.warnung{
+  color: white;
+margin-top: 2rem;
+}
+  
+
+/* --------------- NewSession ---------------  */
+/* --------------- mobile -------------------  */
+
+.newSessionWrap {
+text-align: center;
+margin-top: 2rem;
+}
+
+.newSessionWrap button {
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    border: 2px solid var(--grey0);
+    border-radius: 1.5rem;
+    background-color: var(--red3);
+    color: var(--grey0);
+    cursor: pointer;
+    letter-spacing: 2px;
+    visibility: hidden;
+    
+}
+
+/***************************************************/
+/* --------------- Styling Modal ----------------  */
+/***************************************************/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: var(--red3);
+    margin: auto;
+    padding: 2px 16px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* ----------listenWrap-------------  */
+    
+.listenWrap {
+display: block;
+margin: auto;
+width: 90%;
+max-width: 850px;
+}
+
+.listenFlex {
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
+padding-top: 50px;
+}
+
+.ulListenWrap{
+margin: 0 5px 0 5px;
+padding: 4px;
+background-color: white;
+min-height: 150px;
+margin-top: 1rem;
+}
+
+.zeile {
+display: block;
+}
+
+.inlineLi {
+display: inline; 
+}
+
+/* close button */
+.ulListenWrap span {
+  font-size: 1.2rem;
+  color: white;
+  background-color: red;
+  padding-left: 5px;
+  margin-right: 0.5rem;
+}
+
+.ulListenWrap span:hover {
+  background-color: blue;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.listenFlex ul {
+list-style: none;
+line-height: 1.5rem;
+margin: 0 4px 0 4px;
+word-break: break-all;
+}
+
+
+
+/***************************************************/
+/* --------------- Styling Tablet ---------------  */
+/***************************************************/
+
+@media only screen and (min-width: 450px) {
+
+.listenFlex {
+  flex-direction: row;
+  justify-content: center;
+  }
+
+  .ulListenWrap {
+  width: 48%;
+}
+
+} /* Ende Media Query, nicht löschen */
+
+/***************************************************/
+/* --------------- Styling Desktop---------------  */
+/***************************************************/
+
+    @media only screen and (min-width: 650px) {
+
+    body{
+     background-color: var(--mint0);
+    }
+
+    main { 
+    width: 650px;
+    max-height: 550px;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 2.5rem;
+    }
+
+    .contentWrap {
+    padding-top: 5vh;
+    }
+
+    .words {
+    height: 70px;    
+    }
+
+    .flexContainer {
+    justify-content: center;
+    flex-direction: row;
+    }
+
+    /* default session button */
+    .newSessionWrap {
+        margin-top: 2rem;
+        }
+    
+    .newSessionWrap button {
+      visibility: visible;
+        border: 2px solid var(--grey0);
+        background-color: --var(grey0);
+        color: var(--grey0);
+    }
+    
+    
+    }/*Ende Media-Query nicht löschen
+
+
+/***************************************************/
+/* --------------- Styling Buttons---------------  */
+/***************************************************/
+
+    button:focus,
+    input:focus {
+    outline: none;
+    }
+
+    button:hover,
+    .sendNom:hover,
+    .sendAdj:hover
+     {
+    outline: none;
+    scale: (1.1);
+    }
+
+/* beim Klicken  */
+button:active {
+    outline: none;
+    transform: scale(1.1);
+    transform-origin: center;
+    }
